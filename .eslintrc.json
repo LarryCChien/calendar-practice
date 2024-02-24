@@ -1,0 +1,43 @@
+{
+  // You might want to additionally set this in monorepos where Next.js app is in a subdir
+  "root": true,
+  "extends": [
+    "next",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      // Adapt to your needs (e.g. some might want to only override "next.config.js")
+      "files": [
+        "*.js"
+      ],
+      // This is the default parser of ESLint
+      "parser": "espree",
+      "parserOptions": {
+        "ecmaVersion": 2020
+      }
+    }
+  ],
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "block-spacing": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      "error",
+      120
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}
